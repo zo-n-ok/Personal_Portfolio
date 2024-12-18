@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JONOK is here</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <ul>
+        <li style="--i:6;" id="home">
+            <i class="fas fa-home"></i>
+            <a href="#">Home</a>
+        </li>
+        <li style="--i:5;">
+            <i class="fas fa-info-circle"></i>
+            <a href="about_me/about.html">About me</a>
+        </li>
+        <li style="--i:4;">
+            <i class="fas fa-cogs"></i>
+            <a href="#">Services</a>
+        </li>
+        <li style="--i:3;">
+            <i class="fas fa-briefcase"></i>
+            <a href="#">Portfolio</a>
+        </li>
+        <li style="--i:2;">
+            <i class="fas fa-users"></i>
+            <a href="#">Our Team</a>
+        </li>
+        <li style="--i:1;">
+            <i class="fas fa-envelope"></i>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+
+    <script>
+        // Get the list items by their IDs
+        const home = document.getElementById("home");
+
+        // Add a click event listener to each list item
+        home.addEventListener("click", function() {
+            alert("You fool, this is the home page already!");
+        });
+    </script>
+</body>
+</html>

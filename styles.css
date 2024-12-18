@@ -1,0 +1,109 @@
+/* General Reset and Full Viewport Setup */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #2d2d3a; /* Dark Background Color */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Container */
+ul {
+    position: relative;
+    transform: skewY(-15deg); /* 3D Skew Effect */
+    padding: 0;
+    margin: 0;
+}
+
+/* List Items Styling */
+li {
+    position: relative;
+    list-style: none;
+    width: 180px; /* Reduced width */
+    height: 45px; /* Reduced height */
+    background: #25252b;
+    margin: 0; /* Adjusted spacing */
+    transition: 0.5s;
+    z-index: calc(1 * var(--i)); /* Dynamic Stacking */
+    transform-origin: left;
+}
+
+li:hover {
+    background: #996fae; /* Highlighted Purple Color */
+    transform: translateX(-30px); /* Adjusted push effect */
+}
+
+/* 3D Side Shadow Effect */
+li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px; /* Adjusted left shadow width */
+    width: 30px; /* Reduced width */
+    height: 100%;
+    background: #1e1e24;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+li:hover::before {
+    background: #7b5190; /* Purple Shade */
+}
+
+/* 3D Top Shadow Effect */
+li::after {
+    content: "";
+    position: absolute;
+    top: -30px; /* Adjusted top shadow height */
+    left: 0;
+    width: 100%;
+    height: 30px; /* Reduced height */
+    background: #1e1e24;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+li:hover::after {
+    background: #86589d; /* Purple Shade */
+}
+
+/* Icon Styling */
+/* Icon Styling */
+li i {
+    position: absolute;
+    top: 7px; /* Center vertically */
+    left: -23px; /* Adjust position to align with surface */
+    transform: translateY(-50%) skewY(45deg); /* Add skewY to align with surface */
+    color: #999;
+    font-size: 1rem; /* Adjust size for smaller boxes */
+    transition: 0.5s;
+}
+
+li:hover i {
+    color: #fff; /* Change color on hover */
+}
+
+
+/* Link Styling */
+li a {
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem; /* Smaller text */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    line-height: 45px; /* Adjusted to new height */
+    padding-left: 15px; /* Adjusted left padding */
+    transition: 0.5s;
+}
+
+li:hover a {
+    color: #fff;
+}
