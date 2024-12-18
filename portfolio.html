@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of JONOK</title>
+    <link rel="shortcut icon" href="Content/favicon.ico" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(circle, #4a90e2, #9013fe);
+            overflow: hidden;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers content vertically */
+            align-items: center;    /* Centers content horizontally */
+            text-align: center;
+        }
+
+        /* Top Text */
+        .top-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 2rem; /* Space between top text and center box */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Center Box */
+        .center-box {
+            width: 80%;
+            max-width: 700px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pulse 4s infinite;
+        }
+        .center-box p {
+            font-size: 1.8rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: float 10s infinite;
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-50px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Text -->
+    <div class="top-text">Ohh, you are looking for my portfolio?</div>
+
+    <!-- Center Box -->
+    <div class="center-box">
+        <p>I haven't really done anything interesting of that sort in my life.🥴</p>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particle" style="top: 10%; left: 20%; animation-duration: 7s;"></div>
+    <div class="particle" style="top: 30%; left: 40%; animation-duration: 6s;"></div>
+    <div class="particle" style="top: 50%; left: 70%; animation-duration: 8s;"></div>
+    <div class="particle" style="top: 70%; left: 10%; animation-duration: 5s;"></div>
+    <div class="particle" style="top: 90%; left: 80%; animation-duration: 9s;"></div>
+</body>
+</html>
